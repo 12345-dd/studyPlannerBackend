@@ -15,10 +15,10 @@ mongoose.connect("mongodb://127.0.0.1:27017/smartStudyPlanner").then(()=>{
 const userRoutes = require("./src/routes/UserRoutes");
 const taskRoutes = require("./src/routes/TaskRoutes");
 
-app.use("/user",userRoutes);
-app.use("/task",taskRoutes);
+app.use("/",userRoutes);
+app.use("/",taskRoutes);
 
-const PORT = 4000;
+const PORT = 3000;
 
 app.listen(PORT,()=>{
     console.log(`Server Started at port - ${PORT}`)
